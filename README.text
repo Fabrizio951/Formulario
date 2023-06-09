@@ -18,7 +18,7 @@ Para validar los campos y que estos cumplan con los requerimientos:
       var nombre = document.getElementById("nombre").value;
       var correo = document.getElementById("correo").value;
       var enviarBtn = document.getElementById("enviarBtn");
-Verificar que en el campo "Correo" y "nombre" No esten vacios y bien escritos
+Verificar que en el campo "Correo" y "nombre" No esten vacios y bien escritos. Ya que en caso de que en el campo nombre aparece algo que no sean letras no se activara el boton
       if (nombre !== "" && /^[A-Za-z]+$/.test(nombre) && correo !== "") {
         enviarBtn.disabled = false;
       } else {
