@@ -1,0 +1,35 @@
+Primer caso a realizar
+Se pide crear un formulario en html con js y css.
+Primero creo los elementos html, js y css. Conectamos el css y js de esta manera:
+CSS: <link rel="stylesheet" href="style.css">
+JS:  <script src="script.js"></script>
+Se crea el formulario con todos los campos que se solicitan (Nombre, correo, Número).
+En el js se crea un número aleatorio cada vez que se carga la página:
+  function NumeroAleatorio() {
+      var numeroAleatorio = Math.floor(100000 + Math.random() * 900000);
+      document.getElementById("numero").value = numeroAleatorio;
+  }
+  window.onload = function() {
+      NumeroAleatorio();
+  }
+Para validar los campos y que estos cumplan con los requerimientos:
+  function validarCampos() {
+      var nombre = document.getElementById("nombre").value;
+      var correo = document.getElementById("correo").value;
+      var enviarBtn = document.getElementById("enviarBtn");
+Verificar que en el campo "Correo" y "nombre" No esten vacios y bien escritos
+      if (nombre !== "" && /^[A-Za-z]+$/.test(nombre) && correo !== "") {
+        enviarBtn.disabled = false;
+      } else {
+        enviarBtn.disabled = true;
+      }
+  }
+ En el html en la parte de los inputs en los campos "Nombre" y "Correo" puse el atributo "required" y en el campo "Número" readonly
+         <label for="nombre">Nombre:</label>
+        <input class="inputs" type="text" id="nombre" name="nombre" placeholder="Ingrese su Nombre"required>
+    
+        <label for="correo">Correo:</label>
+        <input class="inputs" type="email" id="correo" name="correo" placeholder="Ingrese su Correo" required>
+    
+        <label for="numero">Número aleatorio:</label>
+        <input class="inputs" type="text" id="numero" name="numero" readonly>
