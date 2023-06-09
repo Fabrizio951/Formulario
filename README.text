@@ -1,7 +1,7 @@
 Primer caso a realizar:
 Se pide crear un formulario en html con js y css.
 VER FORMULARIO: https://fabrizio951.github.io/
-Primero creo los elementos html, js y css. Conectamos el css y js de esta manera:
+Primero creo los elementos html, js y css. Enlazamos el css y js de esta manera:
 CSS: <link rel="stylesheet" href="style.css">
 JS:  <script src="script.js"></script>
 Se crea el formulario con todos los campos que se solicitan (Nombre, correo, Número).
