@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulario</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="Formulario">
+    <h1>Formulario</h1>
+      <form id="myForm">
+        <label for="nombre">Nombre:</label>
+        <input class="inputs" type="text" id="nombre" name="nombre" placeholder="Ingrese su Nombre"required>
+    
+        <label for="correo">Correo:</label>
+        <input class="inputs" type="email" id="correo" name="correo" placeholder="Ingrese su Correo" required>
+    
+        <label for="numero">Número aleatorio:</label>
+        <input class="inputs" type="text" id="numero" name="numero" readonly>
+    
+        <input class="Boton" id="enviarBtn" type="submit" value="ACEPTAR" disabled>
+      </form>
+  </section>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

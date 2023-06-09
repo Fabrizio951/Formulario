@@ -1,0 +1,38 @@
+
+body {
+    background: #F4F7F9;
+}
+.Formulario  {
+    width: 400px;
+    background: white;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: black;
+    box-shadow: 7px 13px 37px #000;
+}
+.Formulario h1 {
+    font-size: 40px;
+    margin-bottom: 25px;
+    margin-top: auto;
+    text-align: center;
+}
+.inputs {
+    width: 95%;
+    background: #fff;
+    padding: 10px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #0070ba;
+    font-size: 18px;
+    color: black;
+    margin-top: 8px;
+  }
+.Boton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
