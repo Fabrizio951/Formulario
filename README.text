@@ -1,36 +1,32 @@
 Primer caso a realizar:
 Se pide crear un formulario en html con js y css.
 VER FORMULARIO: https://fabrizio951.github.io/
-Primero creo los elementos html, js y css. Enlazamos el css y js de esta manera:
-CSS: <link rel="stylesheet" href="style.css">
-JS:  <script src="script.js"></script>
-Se crea el formulario con todos los campos que se solicitan (Nombre, correo, Número).
-En el js se crea un número aleatorio cada vez que se carga la página:
-  function NumeroAleatorio() {
-      var numeroAleatorio = Math.floor(100000 + Math.random() * 900000);
-      document.getElementById("numero").value = numeroAleatorio;
-  }
-  window.onload = function() {
-      NumeroAleatorio();
-  }
-Para validar los campos y que estos cumplan con los requerimientos:
-  function validarCampos() {
-      var nombre = document.getElementById("nombre").value;
-      var correo = document.getElementById("correo").value;
-      var enviarBtn = document.getElementById("enviarBtn");
-Verificar que en el campo "Correo" y "nombre" No esten vacios y bien escritos. Ya que en caso de que en el campo nombre aparece algo que no sean letras no se activara el boton
-      if (nombre !== "" && /^[A-Za-z]+$/.test(nombre) && correo !== "") {
-        enviarBtn.disabled = false;
-      } else {
-        enviarBtn.disabled = true;
-      }
-  }
- En el html en la parte de los inputs en los campos "Nombre" y "Correo" puse el atributo "required" y en el campo "Número" readonly
-         <label for="nombre">Nombre:</label>
-        <input class="inputs" type="text" id="nombre" name="nombre" placeholder="Ingrese su Nombre"required>
-    
-        <label for="correo">Correo:</label>
-        <input class="inputs" type="email" id="correo" name="correo" placeholder="Ingrese su Correo" required>
-    
-        <label for="numero">Número aleatorio:</label>
-        <input class="inputs" type="text" id="numero" name="numero" readonly>
+
+Descripción del Proyecto
+Este proyecto consiste en la implementación de un formulario HTML interactivo. El formulario permite a los usuarios ingresar su nombre y correo electrónico, generando automáticamente un número aleatorio. Además, se aplican validaciones para asegurar que los campos estén correctamente llenados antes de habilitar el botón de envío.
+
+Estructura del Código
+El proyecto se compone de tres archivos principales: HTML, CSS y JavaScript.
+
+Archivo HTML (index.html)
+El archivo HTML proporciona la estructura básica del formulario. Contiene los siguientes elementos:
+
+Una sección con la clase "Formulario" que envuelve todo el contenido.
+Un encabezado (<h1>) que muestra el título "Formulario".
+Un formulario (<form>) con un identificador "myForm".
+Dentro del formulario, se encuentran tres etiquetas <label> con sus respectivos campos de entrada (<input>) para el nombre, correo y número aleatorio.
+Además, se incluye un botón de envío (<input type="submit">) con el identificador "enviarBtn", el cual está inicialmente deshabilitado.
+Archivo CSS (style.css)
+El archivo CSS proporciona los estilos visuales para el formulario. Algunas de las reglas CSS más relevantes incluyen:
+
+Establecimiento de un fondo (background) para el cuerpo (body) con el color #F4F7F9.
+Definición de estilos para la sección con la clase "Formulario", como el ancho (width), fondo (background), relleno (padding), margen (margin), radio del borde (border-radius), tipo de fuente (font-family) y color del texto (color).
+Estilización del encabezado <h1> del formulario, incluyendo el tamaño de fuente (font-size), margen inferior (margin-bottom), margen superior (margin-top) y alineación del texto (text-align).
+Estilos para los campos de entrada (<input>) con la clase "inputs", como el ancho (width), fondo (background), relleno (padding), radio del borde (border-radius), margen inferior (margin-bottom), borde (border), tamaño de fuente (font-size) y color del texto (color).
+Estilización del botón de envío con la clase "Boton", incluyendo la visualización (display), margen izquierdo (margin-left), margen derecho (margin-right) y margen superior (margin-top).
+Archivo JavaScript (script.js)
+El archivo JavaScript proporciona la lógica interactiva del formulario. Contiene las siguientes funciones:
+
+window.onload: Esta función se ejecuta cuando se ha cargado completamente la página. En ella, se invoca la función NumeroAleatorio() y se asignan los eventos de escucha a los campos de entrada de nombre y correo.
+NumeroAleatorio(): Esta función genera un número aleatorio mediante el uso de Math.random() y Math.floor(). Luego, actualiza el valor del campo de entrada "numero" con el número aleatorio generado.
+validarCampos(): Esta función se dispara cada vez que se realiza una entrada en los campos de nombre y correo. Verifica si ambos campos están llenos y si el nombre solo contiene letras mediante una expresión regular. Si se cumplen las condiciones
