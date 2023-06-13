@@ -8,10 +8,10 @@ El proyecto se compone de tres archivos principales: HTML, CSS y JavaScript.
 
 2. Crear archivo HTML:
 Una sección con la clase "Formulario" que envuelve todo el contenido.
-Un encabezado (<h1>) que muestra el título "Formulario".
-Un formulario (<form>) con un identificador "myForm".
-Dentro del formulario, se encuentran tres etiquetas <label> con sus respectivos campos de entrada (<input>) para el nombre, correo y número aleatorio.
-Además, se incluye un botón de envío (<input type="submit">) con el identificador "enviarBtn", el cual está inicialmente deshabilitado.
+Un encabezado (h1) que muestra el título "Formulario".
+Un formulario (form) con un identificador "myForm".
+Dentro del formulario, se encuentran tres etiquetas (label) con sus respectivos campos de entrada (input) para el nombre, correo y número aleatorio.
+Además, se incluye un botón de envío (input type="submit") con el identificador "enviarBtn", el cual está inicialmente deshabilitado.
 
 3. Crear archivo CSS:
 Establecimiento de un fondo (background) para el cuerpo (body) con el color #F4F7F9.
